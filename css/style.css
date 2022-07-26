@@ -17,20 +17,30 @@ body, .rio {
 .rio > div {
     width: 100px;
     height: 100px;
+    position: absolute;
 }
 
 #fazendeiro {
     background-color: rgb(228, 224, 8);
+    top: 400px;
+    left: 350px;
 }
 
 #lobo {
     background-color: rgb(71, 65, 65);
+    top:250px;
+    left:50px;
+    color: white;
 }
 
 #ovelha {
     background-color: rgb(213, 226, 226);
+    top: 550px;
+    left:50px;
 }
 
 #alface {
     background-color: rgb(60, 206, 31);
+    top:400px;
+    left:50px;
 }
