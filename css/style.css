@@ -40,6 +40,8 @@ body, .rio {
 }
 
 #lobo {
+    background-image: url('./../img/Ilustração-Lobo-PNG.png');
+    background-size: cover;
     width: 100px;
     height: 100px;
     background-color: rgb(71, 65, 65);
@@ -49,6 +51,8 @@ body, .rio {
 }
 
 #ovelha {
+    background-image: url('./../img/Ovelha-Jovem-PNG.png');
+    background-size: cover;
     width: 100px;
     height: 100px;
     background-color: rgb(213, 226, 226);
@@ -57,9 +61,17 @@ body, .rio {
 }
 
 #alface {
+    background-image: url('./../img/alface.png');
+    background-size: cover; 
     width: 100px;
     height: 100px;
     background-color: rgb(60, 206, 31);
     top:400px;
     left:50px;
+}
+
+#bau {
+    position: absolute;
+    top: 70px;
+    left: 130px;
 }
