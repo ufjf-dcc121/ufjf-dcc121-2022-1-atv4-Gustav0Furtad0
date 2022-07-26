@@ -8,3 +8,29 @@
 img {
     max-width: 100%;
 }
+
+body, .rio {
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+}
+
+.rio > div {
+    width: 100px;
+    height: 100px;
+}
+
+#fazendeiro {
+    background-color: rgb(228, 224, 8);
+}
+
+#lobo {
+    background-color: rgb(71, 65, 65);
+}
+
+#ovelha {
+    background-color: rgb(213, 226, 226);
+}
+
+#alface {
+    background-color: rgb(60, 206, 31);
+}
