@@ -14,6 +14,17 @@ body, .rio {
     height: 100vh;
 }
 
+.rio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.margem {
+    background-color: chartreuse;
+    width: 200px;
+    height: 100vh;
+}
+
 #fazendeiro {
     position: absolute;
     background-image: url('./../img/tirangasemfundo.png');
