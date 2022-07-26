@@ -44,3 +44,12 @@ body, .rio {
     top:400px;
     left:50px;
 }
+
+@keyframes animafazendeiro {
+    0% { left: 0px; }
+    25% { left: 100%; }
+    37.5% { left: 100%; }
+    62.5% { left: 0px; }
+    75% { left: 0px; }
+    100% { left: 100%; }
+}

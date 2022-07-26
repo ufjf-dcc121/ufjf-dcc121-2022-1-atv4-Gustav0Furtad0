@@ -31,9 +31,32 @@
 
         var objetoNoBarco = null;
 
+        function move(elemento, inicio, fim) {
+            if (inicio < fim) {
+                let i = inicio + 1;
+                setTimeout(() => {
+                    elemento.style.left = i + 'px';
+                    console.log(i);
+                    move(elemento, i, fim);
+                }, 4);
+            } else if (inicio > fim) {
+                let i = inicio - 1;
+                setTimeout(() => {
+                    elemento.style.left = i + 'px';
+                    console.log(i)
+                    move(elemento, i, fim);
+                }, 4);
+            }
+        }
+
         fazendeiro.addEventListener("click", e => {
             let coord = fazendeiro.getBoundingClientRect();
-            console.log(coord);
+            console.log(coord.left);
+            if (coord.left == 350) {
+                move(fazendeiro, coord.left, 1000);
+            } else if (coord.left == 1000) {
+                move(fazendeiro, coord.left, 350)
+            }
         })
     </script>
 </body>
