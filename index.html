@@ -42,9 +42,6 @@
         const mardireita = document.querySelector("#mardireita");
         const bau = document.querySelector("#bau")
 
-        console.log(fazendeiro.getBoundingClientRect());
-        console.log(maresquerda.getBoundingClientRect());
-
         function move(elemento, inicio, fim) {
             if (inicio < fim) {
                 let i = inicio + 1;
@@ -58,6 +55,24 @@
                     elemento.style.left = i + 'px';
                     move(elemento, i, fim);
                 }, 4);
+            }
+        }
+
+        function entraSaiBarco(elemento) {
+            let fazend = fazendeiro.getBoundingClientRect();
+            let maresq = maresquerda.getBoundingClientRect();
+            let mardir = mardireita.getBoundingClientRect();
+            let copia = elemento.outerHTML;
+            if(elemento.parentNode == maresquerda && fazend.left == maresq.right) {
+                console.log("lobinho na esquerda")
+                elemento.remove();
+                bau.innerHTML = copia;
+            } else if(elemento.parentNode == mardireita && fazend.left == (mardir.left - 450)) {
+                console.log("lobinho na direita")
+                elemento.remove();
+                
+            } else if (elemento.parentNode == bau){
+                console.log("Nada aqui")
             }
         }
 
@@ -82,24 +97,16 @@
         });
 
         lobo.addEventListener("click", () => {
-            let fazend = fazendeiro.getBoundingClientRect();
-            let maresq = maresquerda.getBoundingClientRect();
-            let mardir = mardireita.getBoundingClientRect();
-            let copia = lobo.outerHTML;
-            if(lobo.parentNode == maresquerda && fazend.left == maresq.right) {
-                console.log("lobinho na esquerda")
-                lobo.remove();
-                bau.innerHTML = copia;
-            } else if(lobo.parentNode == mardireita && fazend.left == (mardir.left - 450)) {
-                console.log("lobinho na direita")
-                lobo.remove();
-                
-            } else if (lobo.parentNode == bau){
-                console.log("Nada aqui")
-            }
-                
+            entraSaiBarco(lobo);
+        });
 
-        })
+        ovelha.addEventListener("click", () => {
+            entraSaiBarco(ovelha);
+        });
+
+        alface.addEventListener("click", () => {
+            entraSaiBarco(alface);
+        });
         
     </script>
 </body>
