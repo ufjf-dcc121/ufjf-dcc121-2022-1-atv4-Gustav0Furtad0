@@ -14,19 +14,20 @@ body, .rio {
     height: 100vh;
 }
 
-.rio > div {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-}
-
 #fazendeiro {
-    background-color: rgb(228, 224, 8);
+    position: absolute;
+    background-image: url('./../img/tirangasemfundo.png');
+    background-size: cover;
+    width: 450px;
+    height: 250px;
     top: 400px;
-    left: 350px;
+    left: 250px;
 }
 
 #lobo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
     background-color: rgb(71, 65, 65);
     top:250px;
     left:50px;
@@ -34,22 +35,19 @@ body, .rio {
 }
 
 #ovelha {
+    width: 100px;
+    height: 100px;
+    position: absolute;
     background-color: rgb(213, 226, 226);
     top: 550px;
     left:50px;
 }
 
 #alface {
+    width: 100px;
+    height: 100px;
+    position: absolute;
     background-color: rgb(60, 206, 31);
     top:400px;
     left:50px;
-}
-
-@keyframes animafazendeiro {
-    0% { left: 0px; }
-    25% { left: 100%; }
-    37.5% { left: 100%; }
-    62.5% { left: 0px; }
-    75% { left: 0px; }
-    100% { left: 100%; }
 }

@@ -10,6 +10,11 @@
 <body>
     <div class="rio">
         <div id="fazendeiro">
+            <div id="bau">
+                <div id="lobo">
+                    lobo
+                </div>
+            </div>
             fazendeiro
         </div>
         <div id="ovelha">
@@ -52,12 +57,16 @@
         fazendeiro.addEventListener("click", e => {
             let coord = fazendeiro.getBoundingClientRect();
             console.log(coord.left);
-            if (coord.left == 350) {
+            if (coord.left == 250) {
                 move(fazendeiro, coord.left, 1000);
+                fazendeiro.style.transform = 'scaleX(1)';
             } else if (coord.left == 1000) {
-                move(fazendeiro, coord.left, 350)
-            }
-        })
+                move(fazendeiro, coord.left, 250);
+                fazendeiro.style.transform = 'scaleX(-1)';
+            } 
+        });
+
+        
     </script>
 </body>
 </html>
