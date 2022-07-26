@@ -44,7 +44,6 @@ body, .rio {
     background-size: cover;
     width: 100px;
     height: 100px;
-    background-color: rgb(71, 65, 65);
     top:250px;
     left:50px;
     color: white;
@@ -55,7 +54,6 @@ body, .rio {
     background-size: cover;
     width: 100px;
     height: 100px;
-    background-color: rgb(213, 226, 226);
     top: 550px;
     left:50px;
 }
@@ -65,7 +63,6 @@ body, .rio {
     background-size: cover; 
     width: 100px;
     height: 100px;
-    background-color: rgb(60, 206, 31);
     top:400px;
     left:50px;
 }
