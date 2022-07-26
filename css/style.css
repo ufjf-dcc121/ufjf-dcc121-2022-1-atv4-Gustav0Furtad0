@@ -20,6 +20,10 @@ body, .rio {
 }
 
 .margem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
     background-color: chartreuse;
     width: 200px;
     height: 100vh;
@@ -32,13 +36,12 @@ body, .rio {
     width: 450px;
     height: 250px;
     top: 400px;
-    left: 250px;
+    left: 200px;
 }
 
 #lobo {
     width: 100px;
     height: 100px;
-    position: absolute;
     background-color: rgb(71, 65, 65);
     top:250px;
     left:50px;
@@ -48,7 +51,6 @@ body, .rio {
 #ovelha {
     width: 100px;
     height: 100px;
-    position: absolute;
     background-color: rgb(213, 226, 226);
     top: 550px;
     left:50px;
@@ -57,7 +59,6 @@ body, .rio {
 #alface {
     width: 100px;
     height: 100px;
-    position: absolute;
     background-color: rgb(60, 206, 31);
     top:400px;
     left:50px;
