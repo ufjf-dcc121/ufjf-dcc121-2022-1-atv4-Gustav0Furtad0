@@ -40,82 +40,10 @@
         const alface = document.querySelector("#alface");
         const maresquerda = document.querySelector("#maresquerda");
         const mardireita = document.querySelector("#mardireita");
-        const bau = document.querySelector("#bau")
-
-        function move(elemento, inicio, fim) {
-            if (inicio < fim) {
-                let i = inicio + 1;
-                setTimeout(() => {
-                    elemento.style.left = i + 'px';
-                    move(elemento, i, fim);
-                }, 4);
-            } else if (inicio > fim) {
-                let i = inicio - 1;
-                setTimeout(() => {
-                    elemento.style.left = i + 'px';
-                    move(elemento, i, fim);
-                }, 4);
-            }
-        }
-
-        fazendeiro.addEventListener("dblclick", () => {;
-            let fazend = fazendeiro.getBoundingClientRect();
-            let maresq = maresquerda.getBoundingClientRect();
-            let mardir = mardireita.getBoundingClientRect();
-            if (fazend.left == maresq.right) {
-                console.log("Zarpando");
-                move(fazendeiro, fazend.left, (mardir.left - 450));
-                fazendeiro.style.transform = 'scaleX(1)';
-            } else if (fazend.right == mardir.left) {
-                move(fazendeiro, fazend.left, maresq.right);
-                fazendeiro.style.transform = 'scaleX(-1)';
-                console.log("Zarpando");
-            } 
-        });
-
-        function entraSaiBarco(elemento) {
-            let fazend = fazendeiro.getBoundingClientRect();
-            let maresq = maresquerda.getBoundingClientRect();
-            let mardir = mardireita.getBoundingClientRect();
-            let copia = elemento.outerHTML;
-            if(elemento.parentNode == maresquerda && fazend.left == maresq.right) {
-                console.log("Produto entrou no barco pela esquerda")
-                elemento.remove();
-                bau.innerHTML = copia;
-            } else if(elemento.parentNode == mardireita && fazend.left == (mardir.left - 450)) {
-                console.log("Produto entrou no barco pela direita")
-                elemento.remove();
-                
-            } else {
-                console.log("Lobo no baú")
-            }
-        }
-
-        function margens() {
-            console.log(fazendeiro.getBoundingClientRect());
-            console.log(maresquerda.getBoundingClientRect());
-            console.log(mardireita.getBoundingClientRect());
-        }
-
-        
-
-        bau.addEventListener("click", () => {
-            console.log("click bau")
-        });
-
-        lobo.addEventListener("click", () => {
-            console.log('click lobo')
-            entraSaiBarco(lobo);
-        });
-
-        ovelha.addEventListener("click", () => {
-            entraSaiBarco(ovelha);
-        });
-
-        alface.addEventListener("click", () => {
-            entraSaiBarco(alface);
-        });
-        
+        const bau = document.querySelector("#bau");
     </script>
+    <script src="./js/movimentobarco.js"></script>
+    <script src="./js/recursosdev.js"></script>
+    <script src="./js/movimentoprodutos.js"></script>
 </body>
 </html>
