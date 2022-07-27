@@ -22,7 +22,7 @@ function entraSaiBarco(id) {
             console.log("Vai sair do baú")
             elemento.remove();
             mardireita.innerHTML += copia;
-        }else {
+        } else {
             console.log("Não pode sair do baú, tiringa não está na margem"); 
         }
     } else {
@@ -30,22 +30,10 @@ function entraSaiBarco(id) {
     }
 };
 
-/*
-lobo.addEventListener("click", () => {
-    console.log("clicado")
-    entraSaiBarco(lobo);
-});
-
-ovelha.addEventListener("click", () => {
-    entraSaiBarco(ovelha);
-});
-
-alface.addEventListener("click", () => {
-    entraSaiBarco(alface);
-});
-*/ 
-
 maresquerda.addEventListener("click", e => {
-    console.log(e.target.id);
+    entraSaiBarco(e.target.id);
+});
+
+mardireita.addEventListener("click", e => {
     entraSaiBarco(e.target.id);
 });
