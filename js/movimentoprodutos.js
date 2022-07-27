@@ -35,11 +35,3 @@ function entraSaiBarco(id) {
         console.log(`${elemento.id} não pode entrar no baú, tiringa não está na margem`);
     }
 };
-
-maresquerda.addEventListener("click", e => {
-    entraSaiBarco(e.target.id);
-});
-
-mardireita.addEventListener("click", e => {
-    entraSaiBarco(e.target.id);
-});

@@ -20,11 +20,8 @@ function move(elemento, inicio, fim) {
     }
 };
 
-fazendeiro.addEventListener("click", e => {
-    if (e.target.id != 'fazendeiro') {
-        entraSaiBarco(`${e.target.id}`);
-        return;
-    }
+
+function gerfazendeiro() {
     let fazend = fazendeiro.getBoundingClientRect();
     let maresq = maresquerda.getBoundingClientRect();
     let mardir = mardireita.getBoundingClientRect();
@@ -37,4 +34,4 @@ fazendeiro.addEventListener("click", e => {
         move(fazendeiro, fazend.left, maresq.right);
         fazendeiro.style.transform = 'scaleX(-1)';
     }
-});
+}

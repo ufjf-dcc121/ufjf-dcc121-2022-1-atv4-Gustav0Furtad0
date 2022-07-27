@@ -32,9 +32,22 @@
         </div>
         
     </div>
+
     
+
     <script src="./js/movimentobarco.js"></script>
     <script src="./js/recursosdev.js"></script>
     <script src="./js/movimentoprodutos.js"></script>
+
+    <script>
+        window.addEventListener("click", e => {
+            console.log(e.target);
+            if(e.target.className == "produto") {
+                entraSaiBarco(e.target.id)
+            } else if (e.target.id == "fazendeiro") {
+                gerfazendeiro(e);
+            }
+        });
+    </script>
 </body>
 </html>
