@@ -16,7 +16,7 @@ function move(elemento, inicio, fim) {
             move(elemento, i, fim);
         }, 4);
     }
-}
+};
 
 fazendeiro.addEventListener("click", e => {
     if (e.target.id != 'fazendeiro') {

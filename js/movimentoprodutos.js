@@ -5,6 +5,10 @@ function entraSaiBarco(id) {
     let mardir = mardireita.getBoundingClientRect();
     let copia = elemento.outerHTML;
 
+    if (elemento.parentNode == maresquerda || elemento.parentNode == mardireita) {
+        //testar se bau tem elementos filho para ver se é possível entrar non barco
+    }
+
     if(elemento.parentNode == maresquerda && fazend.left == maresq.right) {
         console.log(`${elemento.id} entrou no barco pela esquerda`);
         elemento.remove();
@@ -15,7 +19,7 @@ function entraSaiBarco(id) {
         bau.innerHTML = copia;
     } else if(elemento.parentNode == bau) {
         if(fazend.left == maresq.right) {
-            console.log("Vai sair do baú")
+            console.log("Vai sair do baú");
             elemento.remove();
             maresquerda.innerHTML += copia;
         } else if (fazend.left == (mardir.left - 450)) {
