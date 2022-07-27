@@ -4,24 +4,23 @@ function entraSaiBarco(elemento) {
     let mardir = mardireita.getBoundingClientRect();
     let copia = elemento.outerHTML;
     if(elemento.parentNode == maresquerda && fazend.left == maresq.right) {
-        console.log("Produto entrou no barco pela esquerda")
+        console.log(`${elemento.id} entrou no barco pela esquerda`);
         elemento.remove();
         bau.innerHTML = copia;
     } else if(elemento.parentNode == mardireita && fazend.left == (mardir.left - 450)) {
-        console.log("Produto entrou no barco pela direita")
+        console.log(`${elemento.id} Produto entrou no barco pela direita`);
         elemento.remove();
-        
     } else {
-        console.log("Lobo no baú")
+        console.log("Lobo no baú");
     }
-}
+};
 
 bau.addEventListener("click", () => {
-    console.log("click bau")
+    //console.log("click bau")
 });
 
 lobo.addEventListener("click", () => {
-    console.log('click lobo')
+    //console.log('click lobo')
     entraSaiBarco(lobo);
 });
 
@@ -31,4 +30,4 @@ ovelha.addEventListener("click", () => {
 
 alface.addEventListener("click", () => {
     entraSaiBarco(alface);
-});
+}); 

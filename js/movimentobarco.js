@@ -14,7 +14,11 @@ function move(elemento, inicio, fim) {
     }
 }
 
-fazendeiro.addEventListener("dblclick", () => {;
+fazendeiro.addEventListener("click", e => {
+    if (e.target.id != 'fazendeiro') {
+        entraSaiBarco(document.querySelector(`#${e.target.id}`));
+        return;
+    }
     let fazend = fazendeiro.getBoundingClientRect();
     let maresq = maresquerda.getBoundingClientRect();
     let mardir = mardireita.getBoundingClientRect();
