@@ -7,7 +7,8 @@ function entraSaiBarco(id) {
 
     if (elemento.parentNode == maresquerda || elemento.parentNode == mardireita) {
         //testar se bau tem elementos filho para ver se é possível entrar non barco
-        
+        if(bau.childElementCount)
+            return;
     }
 
     if(elemento.parentNode == maresquerda && fazend.left == maresq.right) {
@@ -20,18 +21,18 @@ function entraSaiBarco(id) {
         bau.innerHTML = copia;
     } else if(elemento.parentNode == bau) {
         if(fazend.left == maresq.right) {
-            console.log("Vai sair do baú");
+            console.log(`${elemento.id} saiu do baú para margem esquerda`);
             elemento.remove();
             maresquerda.innerHTML += copia;
         } else if (fazend.left == (mardir.left - 450)) {
-            console.log("Vai sair do baú")
+            console.log(`${elemento.id} saiu do baú para margem direita`)
             elemento.remove();
             mardireita.innerHTML += copia;
         } else {
             console.log("Não pode sair do baú, tiringa não está na margem"); 
         }
     } else {
-        console.log(`ERRO: ${elemento.parentNode}`);
+        console.log(`${elemento.id} não pode entrar no baú, tiringa não está na margem`);
     }
 };
 

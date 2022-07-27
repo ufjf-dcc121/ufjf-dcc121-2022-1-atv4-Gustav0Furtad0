@@ -15,6 +15,8 @@ function move(elemento, inicio, fim) {
             elemento.style.left = i + 'px';
             move(elemento, i, fim);
         }, 4);
+    } else {
+        console.log("Tiringa chegou a margem");
     }
 };
 
@@ -27,12 +29,12 @@ fazendeiro.addEventListener("click", e => {
     let maresq = maresquerda.getBoundingClientRect();
     let mardir = mardireita.getBoundingClientRect();
     if (fazend.left == maresq.right) {
-        console.log("Zarpando");
+        console.log("Zarpando....");
         move(fazendeiro, fazend.left, (mardir.left - 450));
         fazendeiro.style.transform = 'scaleX(1)';
     } else if (fazend.right == mardir.left) {
+        console.log("Zarpando...");
         move(fazendeiro, fazend.left, maresq.right);
         fazendeiro.style.transform = 'scaleX(-1)';
-        console.log("Zarpando");
-    } 
+    }
 });
