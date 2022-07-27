@@ -37,38 +37,34 @@ body, .rio {
     height: 250px;
     top: 400px;
     left: 200px;
+    z-index: 1;
 }
 
-#lobo {
-    background-image: url('./../img/Ilustração-Lobo-PNG.png');
+.produto {
+    cursor: pointer;
     background-size: cover;
     width: 100px;
     height: 100px;
     top:250px;
     left:50px;
-    color: white;
+    z-index: 999;
+}
+
+#lobo {
+    background-image: url('./../img/Ilustração-Lobo-PNG.png');
 }
 
 #ovelha {
     background-image: url('./../img/Ovelha-Jovem-PNG.png');
-    background-size: cover;
-    width: 100px;
-    height: 100px;
-    top: 550px;
-    left:50px;
 }
 
 #alface {
     background-image: url('./../img/alface.png');
-    background-size: cover; 
-    width: 100px;
-    height: 100px;
-    top:400px;
-    left:50px;
 }
 
 #bau {
     position: absolute;
     top: 70px;
     left: 130px;
+    z-index: -1;
 }

@@ -10,13 +10,13 @@
 <body>
     <div class="rio">
         <div class="margem" id="maresquerda">
-            <div id="ovelha">
+            <div class="produto"  id="ovelha">
                 
             </div>
-            <div id="alface">
+            <div class="produto" id="alface">
                 
             </div>
-            <div id="lobo">
+            <div class="produto" id="lobo">
                   
             </div>
         </div>
@@ -58,21 +58,36 @@
             }
         }
 
+        fazendeiro.addEventListener("dblclick", () => {;
+            let fazend = fazendeiro.getBoundingClientRect();
+            let maresq = maresquerda.getBoundingClientRect();
+            let mardir = mardireita.getBoundingClientRect();
+            if (fazend.left == maresq.right) {
+                console.log("Zarpando");
+                move(fazendeiro, fazend.left, (mardir.left - 450));
+                fazendeiro.style.transform = 'scaleX(1)';
+            } else if (fazend.right == mardir.left) {
+                move(fazendeiro, fazend.left, maresq.right);
+                fazendeiro.style.transform = 'scaleX(-1)';
+                console.log("Zarpando");
+            } 
+        });
+
         function entraSaiBarco(elemento) {
             let fazend = fazendeiro.getBoundingClientRect();
             let maresq = maresquerda.getBoundingClientRect();
             let mardir = mardireita.getBoundingClientRect();
             let copia = elemento.outerHTML;
             if(elemento.parentNode == maresquerda && fazend.left == maresq.right) {
-                console.log("lobinho na esquerda")
+                console.log("Produto entrou no barco pela esquerda")
                 elemento.remove();
                 bau.innerHTML = copia;
             } else if(elemento.parentNode == mardireita && fazend.left == (mardir.left - 450)) {
-                console.log("lobinho na direita")
+                console.log("Produto entrou no barco pela direita")
                 elemento.remove();
                 
-            } else if (elemento.parentNode == bau){
-                console.log("Nada aqui")
+            } else {
+                console.log("Lobo no baú")
             }
         }
 
@@ -82,21 +97,14 @@
             console.log(mardireita.getBoundingClientRect());
         }
 
-        fazendeiro.addEventListener("click", () => {;
-            let fazend = fazendeiro.getBoundingClientRect();
-            let maresq = maresquerda.getBoundingClientRect();
-            let mardir = mardireita.getBoundingClientRect();
-            console.log(fazend.left);
-            if (fazend.left == maresq.right) {
-                move(fazendeiro, fazend.left, (mardir.left - 450));
-                fazendeiro.style.transform = 'scaleX(1)';
-            } else if (fazend.right == mardir.left) {
-                move(fazendeiro, fazend.left, maresq.right);
-                fazendeiro.style.transform = 'scaleX(-1)';
-            } 
+        
+
+        bau.addEventListener("click", () => {
+            console.log("click bau")
         });
 
         lobo.addEventListener("click", () => {
+            console.log('click lobo')
             entraSaiBarco(lobo);
         });
 
