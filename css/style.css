@@ -24,7 +24,7 @@ body, .rio {
     flex-direction: column;
     align-items: center;
     justify-content:space-around;
-    background-color: chartreuse;
+    background-color: rgb(155, 209, 101);
     width: 200px;
     height: 100vh;
 }
@@ -35,7 +35,7 @@ body, .rio {
     background-size: cover;
     width: 450px;
     height: 250px;
-    top: 400px;
+    top: 50%;
     left: 200px;
     z-index: 1;
 }
