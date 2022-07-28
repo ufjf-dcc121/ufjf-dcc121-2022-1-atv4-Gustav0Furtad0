@@ -24,10 +24,12 @@ const entraSaiBarco = id => {
             console.log(`${elemento.id} saiu do baú para margem esquerda`);
             elemento.remove();
             maresquerda.innerHTML += copia;
+            verificaWL();
         } else if (fazend.left == (mardir.left - 450)) {
             console.log(`${elemento.id} saiu do baú para margem direita`)
             elemento.remove();
             mardireita.innerHTML += copia;
+            verificaWL();
         } else {
             console.log("Não pode sair do baú, tiringa não está na margem"); 
         }
