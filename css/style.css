@@ -17,16 +17,22 @@ body, .rio {
 .rio {
     display: flex;
     justify-content: space-between;
+    background-color: ;
 }
 
 .margem {
+    background-image: url("./../img/margemgrama.png");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-around;
-    background-color: rgb(155, 209, 101);
     width: 200px;
     height: 100vh;
+}
+
+#mardireita {
+    transform: scale(-1);
 }
 
 #fazendeiro {
