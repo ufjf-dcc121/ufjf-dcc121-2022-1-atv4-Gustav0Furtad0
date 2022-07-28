@@ -115,8 +115,10 @@ body, .rio {
 
 #resetbutton {
     position: absolute;
-    height: fit-content;
+    height: 60px;
+    width: 90px;
     left: 50%;
     transform: translateX(-50%);
     top: 30px;
+    border-radius: 15px;
 }
