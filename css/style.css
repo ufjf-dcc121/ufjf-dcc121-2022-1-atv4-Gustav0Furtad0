@@ -17,7 +17,7 @@ body, .rio {
 .rio {
     display: flex;
     justify-content: space-between;
-    background-color: ;
+    background-color: rgb(21, 128, 221);
 }
 
 .margem {
