@@ -6,7 +6,6 @@ const entraSaiBarco = id => {
     let copia = elemento.outerHTML;
 
     if (elemento.parentNode == maresquerda || elemento.parentNode == mardireita) {
-        //testar se bau tem elementos filho para ver se é possível entrar non barco
         if(bau.childElementCount)
             return;
     }

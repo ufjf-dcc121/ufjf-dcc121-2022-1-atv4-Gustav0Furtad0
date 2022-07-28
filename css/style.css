@@ -112,3 +112,11 @@ body, .rio {
     border: solid 1px black;
     font-weight: 900;
 }
+
+#resetbutton {
+    position: absolute;
+    height: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+}

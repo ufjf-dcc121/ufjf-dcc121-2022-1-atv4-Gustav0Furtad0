@@ -36,7 +36,7 @@ const popup = (tit, message, btmessage, reset = true) => {
     document.querySelector("body").innerHTML += mensagem;
 };
 
-const resmensagem = (reset) => {
+const resmensagem = (reset = true) => {
     if(reset)
         document.location.reload(true);
     else
