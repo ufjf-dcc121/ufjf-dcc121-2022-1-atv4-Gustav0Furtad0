@@ -15,10 +15,12 @@ const move = (elemento, inicio, fim) => {
         if (margemBarco == "maresquerda") {
             console.log("Tiringa chegou a margem direita");
             margemBarco = "mardireita";
+            fazendeiro.style.transform = 'scaleX(-1)';
             verificaWL();
         } else if (margemBarco == "mardireita") {
             console.log("Tiringa chegou a margem esquerda");
             margemBarco = "maresquerda";
+            fazendeiro.style.transform = 'scaleX(1)';
             verificaWL();
         };
     };
@@ -32,10 +34,8 @@ const gerfazendeiro = () => {
     if (fazend.left == maresq.right) {
         console.log("Zarpando....");
         move(fazendeiro, fazend.left, (mardir.left - 450));
-        fazendeiro.style.transform = 'scaleX(1)';
     } else if (fazend.right == mardir.left) {
         console.log("Zarpando...");
         move(fazendeiro, fazend.left, maresq.right);
-        fazendeiro.style.transform = 'scaleX(-1)';
     }
 }
