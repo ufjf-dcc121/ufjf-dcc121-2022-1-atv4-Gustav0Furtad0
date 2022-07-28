@@ -4,13 +4,13 @@ const move = (elemento, inicio, fim) => {
         setTimeout(() => {
             elemento.style.left = i + 'px';
             move(elemento, i, fim);
-        }, 4);
+        }, 1);
     } else if (inicio > fim) {
         let i = inicio - 1;
         setTimeout(() => {
             elemento.style.left = i + 'px';
             move(elemento, i, fim);
-        }, 4);
+        }, 1);
     } else {
         if (margemBarco == "maresquerda") {
             console.log("Tiringa chegou a margem direita");
