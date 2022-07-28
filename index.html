@@ -31,16 +31,17 @@
             </div>
         </div>
     </div>
-    <div>
-        <div class="mensagemfundo">
-            <div class="mensagemcorp">
-                <h3>Derrota!!</h3>
-                <p>Você deu mole!</p>
-            </div>
+    <div class="mensagemfundo">
+        <div class="mensagemcorp">
+            <h3>Derrota!!</h3>
+            <p>Você deu mole!</p>
+            <button onclick="resmensagem()">Tentar novamente</button>
         </div>
     </div>
     <script>
-        
+        function resmensagem() {
+            document.location.reload(true);
+        }
     </script>
     <script src="./js/variaveisglobais.js"></script>
     <script src="./js/verificaWinLoss.js"></script>
