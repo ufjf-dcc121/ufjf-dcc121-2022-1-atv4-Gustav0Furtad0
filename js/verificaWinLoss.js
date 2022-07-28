@@ -1,17 +1,4 @@
 const verificaWL = () => {
-    const popup = (tit, message, btmessage) => {
-        let mensagem = `
-        <div class="mensagemfundo">
-            <div class="mensagemcorp">
-                <h3>${tit}</h3>
-                <p>${message}</p>
-                <button onclick="resmensagem()">${btmessage}</button>
-            </div>
-        </div>
-        `;
-        document.querySelector("body").innerHTML += mensagem
-    }
-
     const lobo = document.querySelector("#lobo").parentNode.id;
     const ovelha = document.querySelector("#ovelha").parentNode.id;
     const alface = document.querySelector("#alface").parentNode.id;
@@ -36,6 +23,22 @@ const verificaWL = () => {
     }
 };
 
-const resmensagem = () => {
-    document.location.reload(true);
-}
+const popup = (tit, message, btmessage, reset = true) => {
+    let mensagem = `
+    <div class="mensagemfundo" id="popup">
+        <div class="mensagemcorp">
+            <h3>${tit}</h3>
+            <p>${message}</p>
+            <button onclick="resmensagem(${reset})">${btmessage}</button>
+        </div>
+    </div>
+    `;
+    document.querySelector("body").innerHTML += mensagem;
+};
+
+const resmensagem = (reset) => {
+    if(reset)
+        document.location.reload(true);
+    else
+        document.querySelector("#popup").remove();
+};

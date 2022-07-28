@@ -100,7 +100,7 @@ body, .rio {
 }
 
 .mensagemcorp > p {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .mensagemcorp > button {
@@ -110,4 +110,5 @@ body, .rio {
     padding: 10px 15px;
     border-radius: 8px;
     border: solid 1px black;
+    font-weight: 900;
 }
