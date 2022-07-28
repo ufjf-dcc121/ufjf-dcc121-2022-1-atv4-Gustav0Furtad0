@@ -21,7 +21,7 @@ function move(elemento, inicio, fim) {
 };
 
 
-function gerfazendeiro() {
+const gerfazendeiro = () => {
     let fazend = fazendeiro.getBoundingClientRect();
     let maresq = maresquerda.getBoundingClientRect();
     let mardir = mardireita.getBoundingClientRect();

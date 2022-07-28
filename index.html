@@ -41,13 +41,16 @@
 
     <script>
         window.addEventListener("click", e => {
-            console.log(e.target);
             if(e.target.className == "produto") {
                 entraSaiBarco(e.target.id)
             } else if (e.target.id == "fazendeiro") {
                 gerfazendeiro(e);
             }
         });
+
+        const verificaWL = () => {
+            
+        }
     </script>
 </body>
 </html>
