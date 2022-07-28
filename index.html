@@ -37,6 +37,19 @@
         const fazendeiro = document.querySelector("#fazendeiro");
         const maresquerda = document.querySelector("#maresquerda");
         const mardireita = document.querySelector("#mardireita");
+        const bau = document.querySelector("#bau");
+        var margemBarco = maresquerda.id;
+
+        const verificaWL = () => {
+            const lobo = document.querySelector("#lobo").parentNode.id;
+            const ovelha = document.querySelector("#ovelha").parentNode.id;
+            const alface = document.querySelector("#alface").parentNode.id;
+            if (lobo == ovelha && lobo != margemBarco) {
+                console.log("perdeu");
+            } else if (ovelha == alface && ovelha != margemBarco) {
+                console.log("perdeu");
+            }
+        };
     </script>
 
     <script src="./js/movimentobarco.js"></script>
@@ -52,9 +65,7 @@
             }
         });
 
-        const verificaWL = () => {
-
-        }
+        
     </script>
 </body>
 </html>

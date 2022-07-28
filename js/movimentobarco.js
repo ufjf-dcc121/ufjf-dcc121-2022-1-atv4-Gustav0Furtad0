@@ -1,6 +1,4 @@
-
-const bau = document.querySelector("#bau");
-function move(elemento, inicio, fim) {
+const move = (elemento, inicio, fim) => {
     if (inicio < fim) {
         let i = inicio + 1;
         setTimeout(() => {
@@ -14,8 +12,16 @@ function move(elemento, inicio, fim) {
             move(elemento, i, fim);
         }, 4);
     } else {
-        console.log("Tiringa chegou a margem");
-    }
+        if (margemBarco == "maresquerda") {
+            console.log("Tiringa chegou a margem direita");
+            margemBarco = "mardireita";
+            verificaWL();
+        } else if (margemBarco == "mardireita") {
+            console.log("Tiringa chegou a margem esquerda");
+            margemBarco = "maresquerda";
+            verificaWL();
+        };
+    };
 };
 
 

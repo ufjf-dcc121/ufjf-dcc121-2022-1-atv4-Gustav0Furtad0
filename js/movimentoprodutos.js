@@ -1,4 +1,4 @@
-const entraSaiBarco = (id) => {
+const entraSaiBarco = id => {
     const elemento = document.querySelector(`#${id}`);
     let fazend = fazendeiro.getBoundingClientRect();
     let maresq = maresquerda.getBoundingClientRect();
