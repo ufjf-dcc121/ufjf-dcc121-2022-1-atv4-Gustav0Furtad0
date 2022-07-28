@@ -67,6 +67,9 @@
                 console.log("lobinho na esquerda")
                 elemento.remove();
                 bau.innerHTML = copia;
+                bau.querySelector("#ovelha").addEventListener("click", ()=>{
+                    console.log("ovelha dolly clicada");
+                })
             } else if(elemento.parentNode == mardireita && fazend.left == (mardir.left - 450)) {
                 console.log("lobinho na direita")
                 elemento.remove();
@@ -82,7 +85,8 @@
             console.log(mardireita.getBoundingClientRect());
         }
 
-        fazendeiro.addEventListener("click", () => {;
+        fazendeiro.addEventListener("click", (e) => {
+            console.log("clicou no fazendeiro");
             let fazend = fazendeiro.getBoundingClientRect();
             let maresq = maresquerda.getBoundingClientRect();
             let mardir = mardireita.getBoundingClientRect();
@@ -100,7 +104,9 @@
             entraSaiBarco(lobo);
         });
 
-        ovelha.addEventListener("click", () => {
+        ovelha.addEventListener("click", (e) => {
+            console.log("Ovelha clicada");
+            e.stopPropagation();
             entraSaiBarco(ovelha);
         });
 
