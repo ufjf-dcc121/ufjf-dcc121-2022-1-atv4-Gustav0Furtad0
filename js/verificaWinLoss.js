@@ -1,4 +1,12 @@
 const verificaWL = () => {
+    
+    const popup = (tit, message) => {
+        let mensaegm = `
+        
+        `; 
+    }
+
+
     const lobo = document.querySelector("#lobo").parentNode.id;
     const ovelha = document.querySelector("#ovelha").parentNode.id;
     const alface = document.querySelector("#alface").parentNode.id;

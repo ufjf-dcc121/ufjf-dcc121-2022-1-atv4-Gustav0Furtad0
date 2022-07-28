@@ -47,7 +47,7 @@ body, .rio {
     height: 100px;
     top:250px;
     left:50px;
-    z-index: 999;
+    z-index: 100;
 }
 
 #lobo {
@@ -67,4 +67,29 @@ body, .rio {
     top: 70px;
     left: 130px;
     z-index: -1;
+}
+
+.mensagemfundo {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(10px);
+}
+
+.mensagemcorp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
 }
