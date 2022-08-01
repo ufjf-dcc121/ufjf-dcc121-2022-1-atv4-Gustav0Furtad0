@@ -34,13 +34,23 @@
         </div>
     </div>
     
+    <!-- Arquivo contendo variáveis "globais" do projeto -->
     <script src="./js/variaveisglobais.js"></script>
+
+    <!-- Verifica se jogador perdeu ou ganhou e exibi popup -->
     <script src="./js/verificaWinLoss.js"></script>
+
+    <!-- Animação e movientação do barco -->
     <script src="./js/movimentobarco.js"></script>
+
+    <!-- Recursos para serem usando no console em tempo de execução -->
     <script src="./js/recursosdev.js"></script>
+
+    <!-- Verifca a possibilidade de movimento e movimenta produtos entre margem e barco -->
     <script src="./js/movimentoprodutos.js"></script>
 
     <script>
+        //Identifica elemento clicado na tela
         window.addEventListener("click", e => {
             if(e.target.className == "produto") {
                 entraSaiBarco(e.target.id)
@@ -48,7 +58,10 @@
                 gerfazendeiro(e);
             }
         });
+
         /*
+        //Insere popup no início
+        //Função danifica o funcionamento do código
         window.addEventListener('load', () => {
             popup(
                 "Bem vindo!!!",
