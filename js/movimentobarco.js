@@ -1,4 +1,5 @@
 const move = (elemento, inicio, fim) => {
+    //função responsável pela animação do movimento do barco
     if (inicio < fim) {
         let i = inicio + 1;
         setTimeout(() => {
@@ -26,7 +27,7 @@ const move = (elemento, inicio, fim) => {
     };
 };
 
-
+//função indica para onde barco debe ir e chama animação
 const gerfazendeiro = () => {
     let fazend = fazendeiro.getBoundingClientRect();
     let maresq = maresquerda.getBoundingClientRect();

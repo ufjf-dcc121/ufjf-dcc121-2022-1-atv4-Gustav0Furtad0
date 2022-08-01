@@ -1,15 +1,21 @@
 const entraSaiBarco = id => {
+    /*
+    função responsável verificar e fazer com que
+    o porduto entre no barco ou saia dele
+    */
     const elemento = document.querySelector(`#${id}`);
     let fazend = fazendeiro.getBoundingClientRect();
     let maresq = maresquerda.getBoundingClientRect();
     let mardir = mardireita.getBoundingClientRect();
     let copia = elemento.outerHTML;
 
+    //verifica se tem algum elemento no barco
     if (elemento.parentNode == maresquerda || elemento.parentNode == mardireita) {
         if(bau.childElementCount)
             return;
     }
 
+    //verfica a possibilidade e para onde o elemento deve sair ou entrar no barso
     if(elemento.parentNode == maresquerda && fazend.left == maresq.right) {
         console.log(`${elemento.id} entrou no barco pela esquerda`);
         elemento.remove();
