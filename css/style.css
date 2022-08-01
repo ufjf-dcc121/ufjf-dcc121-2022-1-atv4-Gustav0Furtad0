@@ -1,3 +1,4 @@
+/* configurações pessoais de projeto */
 * {
     padding: 0;
     margin: 0;
@@ -9,11 +10,13 @@ img {
     max-width: 100%;
 }
 
+/* configuração de fonte e tamanho do body */
 body, .rio {
     font-family: 'Courier New', Courier, monospace;
     height: 100vh;
 }
 
+/* estilo do rio e margens */
 .rio {
     display: flex;
     justify-content: space-between;
@@ -35,6 +38,7 @@ body, .rio {
     transform: scaleX(-1);
 }
 
+/* estilo do fazendeiro */
 #fazendeiro {
     position: absolute;
     background-image: url('./../img/tirangasemfundo.png');
@@ -46,6 +50,14 @@ body, .rio {
     z-index: 1;
 }
 
+#bau {
+    position: absolute;
+    top: 70px;
+    left: 130px;
+    z-index: -1;
+}
+
+/* configuracao do fazendeiro */
 .produto {
     cursor: pointer;
     background-size: cover;
@@ -68,13 +80,7 @@ body, .rio {
     background-image: url('./../img/alface.png');
 }
 
-#bau {
-    position: absolute;
-    top: 70px;
-    left: 130px;
-    z-index: -1;
-}
-
+/* estilo da tela de popup */
 .mensagemfundo {
     z-index: 999;
     display: flex;
@@ -119,6 +125,7 @@ body, .rio {
     font-weight: 900;
 }
 
+/* estilo do butao de reset */
 #resetbutton {
     position: absolute;
     height: 60px;
